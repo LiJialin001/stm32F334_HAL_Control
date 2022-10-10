@@ -9,6 +9,11 @@
 ## 文件树
 - Hardware 硬件驱动
 - Midware 硬件与软件中间层
+- Basic CPU API的封装或其他与CPU底层相关代码
+
+## 移植规范
+不要在Hardware、Midware文件夹下的代码中调用CPU API 或寄存器
+Hardware、Midware可移植到其他CPU平台
 
 ## Git规范
 ### 功能修改/更新
