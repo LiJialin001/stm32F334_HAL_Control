@@ -1,2 +1,0 @@
-../Basic/Src/sys.c:5:6:delay_ms	16	static
-../Basic/Src/sys.c:10:6:delay_s	16	static

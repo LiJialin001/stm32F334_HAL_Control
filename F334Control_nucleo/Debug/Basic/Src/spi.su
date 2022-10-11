@@ -1,8 +1,0 @@
-../Basic/Src/spi.c:12:6:MX_SPI1_Init	8	static,ignoring_inline_asm
-../Basic/Src/spi.c:57:9:SPI_ReadWriteByte	32	static
-../Basic/Src/spi.c:70:6:SPI_WriteByte	16	static
-../Basic/Src/spi.c:81:9:SPI_ReadByte	16	static
-../Basic/Src/spi.c:93:10:SPI_ReadWrite2Byte	24	static
-../Basic/Src/spi.c:109:6:SPI_Write2Byte	16	static
-../Basic/Src/spi.c:120:10:SPI_Read2Byte	16	static
-../Basic/Src/spi.c:138:6:SPI_WriteSomeByte	16	static

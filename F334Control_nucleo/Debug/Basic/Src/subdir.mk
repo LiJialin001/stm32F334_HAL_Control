@@ -5,14 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Basic/Src/i2c.c \
 ../Basic/Src/spi.c \
 ../Basic/Src/sys.c 
 
 OBJS += \
+./Basic/Src/i2c.o \
 ./Basic/Src/spi.o \
 ./Basic/Src/sys.o 
 
 C_DEPS += \
+./Basic/Src/i2c.d \
 ./Basic/Src/spi.d \
 ./Basic/Src/sys.d 
 
@@ -24,7 +27,7 @@ Basic/Src/%.o Basic/Src/%.su: ../Basic/Src/%.c Basic/Src/subdir.mk
 clean: clean-Basic-2f-Src
 
 clean-Basic-2f-Src:
-	-$(RM) ./Basic/Src/spi.d ./Basic/Src/spi.o ./Basic/Src/spi.su ./Basic/Src/sys.d ./Basic/Src/sys.o ./Basic/Src/sys.su
+	-$(RM) ./Basic/Src/i2c.d ./Basic/Src/i2c.o ./Basic/Src/i2c.su ./Basic/Src/spi.d ./Basic/Src/spi.o ./Basic/Src/spi.su ./Basic/Src/sys.d ./Basic/Src/sys.o ./Basic/Src/sys.su
 
 .PHONY: clean-Basic-2f-Src
 
