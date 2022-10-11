@@ -4,7 +4,7 @@
 #include "stm32f3xx_hal.h"
 
 
-void MX_SPI1_Init(void);
+//void MX_SPI1_Init(void);
 uint8_t SPI_ReadWriteByte(uint8_t TxData);
 void SPI_WriteByte(uint8_t TxData);
 uint8_t SPI_ReadByte(void);

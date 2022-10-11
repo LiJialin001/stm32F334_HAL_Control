@@ -40,7 +40,7 @@
 /* USER CODE BEGIN PD */
 #define USER_MAIN_DEBUG
 
-// 打印log define USER_MAIN_DEBUG 后生�?????
+// 打印log define USER_MAIN_DEBUG 后生�??????
 #ifdef USER_MAIN_DEBUG
 #define user_main_printf(format, ...) printf( format "\r\n", ##__VA_ARGS__)
 #define user_main_info(format, ...) printf("[\tmain]info:" format "\r\n", ##__VA_ARGS__)
@@ -65,6 +65,10 @@
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
+I2C_HandleTypeDef hi2c1;
+
+SPI_HandleTypeDef hspi1;
+
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 
@@ -79,6 +83,8 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_I2C1_Init(void);
+static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_ADC1_Init(void);
@@ -142,9 +148,9 @@ int main(void)
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
-  //LCD_Init();
+  LCD_Init();
 
-  //English_Font_test();
+  English_Font_test();
 
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
  // _HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 200);
@@ -162,7 +168,7 @@ int main(void)
 //	  HAL_ADC_Start(&hadc1);//启动ADC装换
 //	  HAL_ADC_PollForConversion(&hadc1, 50);//等待转换完成，第二个参数表示超时时间 单位ms.
 //	  if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc1), HAL_ADC_STATE_REG_EOC)){
-//		  AD_Value = HAL_ADC_GetValue(&hadc1);//读取ADC转换数据，数据为12�?
+//		  AD_Value = HAL_ADC_GetValue(&hadc1);//读取ADC转换数据，数据为12�??
 //		  user_main_info(AD_Value*3300.0/4096);//打印日志
 //	  }
 
@@ -617,7 +623,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	static int i = 0;
 	if(++i == size)i = 0;
 	if (htim->Instance == htim2.Instance){
-		_HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, sin[i]); //由向量表修改占空�??
+		_HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, sin[i]); //由向量表修改占空�???
 	}
 }
 

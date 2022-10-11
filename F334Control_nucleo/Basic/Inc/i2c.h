@@ -6,7 +6,7 @@
 
 
 
-void MX_I2C1_Init(void);
+//void MX_I2C1_Init(void);
 
 void I2C1_WriteBytes(uint16_t DevAddress, uint8_t TxData, uint16_t u16Size);
 uint8_t I2C1_ReadByte(uint16_t DevAddress, uint16_t u16Size);
