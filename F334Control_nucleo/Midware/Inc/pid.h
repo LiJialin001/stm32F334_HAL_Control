@@ -25,7 +25,7 @@ typedef enum
     emPID_AUX4,
     emPID_AUX5,
 
-    emNum_Of_PID_List,
+    emNum_Of_PID_List,    // 为 PIDGroup 计算总数
 }emPID_list_t;
 
 

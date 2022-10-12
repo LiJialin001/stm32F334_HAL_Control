@@ -29,6 +29,7 @@
 #include "gui.h"
 #include "ssd1309.h"
 
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -622,7 +623,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	static int i = 0;
 	if(++i == size)i = 0;
 	if (htim->Instance == htim2.Instance){
-		_HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, sin[i]); //由向量表修改占空�???
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, sin[i]); //由向量表修改占空
 	}
 }
 
