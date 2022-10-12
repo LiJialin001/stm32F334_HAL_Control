@@ -86,6 +86,14 @@ void Error_Handler(void);
 extern I2C_HandleTypeDef hi2c1;
 extern SPI_HandleTypeDef hspi1;
 
+extern ADC_HandleTypeDef hadc1;
+extern DMA_HandleTypeDef hdma_adc1;
+
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim2;
+
+extern UART_HandleTypeDef huart2;
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

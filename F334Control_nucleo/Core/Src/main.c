@@ -153,7 +153,6 @@ int main(void)
   English_Font_test();
 
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
- // _HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 200);
   HAL_TIM_Base_Start_IT(&htim2);
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Value, 100);
