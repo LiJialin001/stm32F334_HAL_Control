@@ -8,9 +8,9 @@
 - 引脚号必须使用label代替
 
 ## 文件树
-- Hardware 硬件驱动
-- Midware 硬件与软件中间层
-- Basic CPU API的封装或其他与CPU底层相关代码
+- Hardware： 硬件驱动
+- Midware： 硬件与软件中间层
+- Basic： CPU API的封装或其他与CPU底层相关代码
 
 ## 移植规范
 尽可能不要在Hardware、Midware文件夹下的代码中调用CPU API 或寄存器
@@ -33,7 +33,9 @@ msg：附加的说明信息，务必是能让其他人看懂
 
 
 ## log规范
+
 使用串口实现log输出，打印的Log的级别是能真实反映此Log对应的级别，标签、Log内容具有很好的可读性
+
 ### 各个Log等级的使用
 Debug
 > 用于调试的信息，编译进产品，但可以在运行时关闭
@@ -50,9 +52,11 @@ Error
 
 
 # 外设
+在 main.h 中 extern 外设，初始化配置依照Cube MX 生成的位置不动
+
 ## spi
 8位传输  全双工
-> Tip  初始化配置在spi.h 每次更新Cube MX 记得搬运（删除
+
 ## LCD
 - SCL和SDA（DIN）分别为SPI的时钟信号线和数据线
 - RES为LCD的复位信号，STM32控制其复位
@@ -64,8 +68,19 @@ Error
 引脚功能同LCD
 
 
+# 算法
+
+## PID
+
+
+## FFT
+
+
+
+
 # 工具
 [取模软件](http://en.radzio.dxp.pl/bitmap_converter/)
+
 [显示屏Wiki，含部分驱动](http://www.lcdwiki.com/Main_Page)
 
 # 本项目基于以下项目
