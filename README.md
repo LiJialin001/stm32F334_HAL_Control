@@ -71,6 +71,15 @@ Error
 # 算法
 
 ## PID
+- 单极PID   适合线性系统
+- 串级PID   非线性
+### 调参
+- 单级：
+  - 首先加P （P太小，不足；P太大，在平衡位置容易震荡；调好情况：不太会震荡，但过零后会回弹好几下才能停止） 
+  - 其次加D （作用是能很好地抑制过零后的震荡）
+  - 最后加I （在一定范围内修正）
+- 串级：
+  - 先内环后外环
 
 
 ## FFT
@@ -79,6 +88,8 @@ Error
 
 
 # 工具
+[串口](https://github.com/rymcu/RYCOM)
+
 [取模软件](http://en.radzio.dxp.pl/bitmap_converter/)
 
 [显示屏Wiki，含部分驱动](http://www.lcdwiki.com/Main_Page)
